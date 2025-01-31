@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import {
-  getContests,
   clearContestsList,
+  getContests,
   setNewCustomerFilter,
 } from '../../store/slices/contestsSlice';
 import CONSTANTS from '../../constants';

@@ -5,8 +5,8 @@ import queryString from 'query-string';
 import classNames from 'classnames';
 import isEqual from 'lodash/isEqual';
 import {
-  getContests,
   clearContestsList,
+  getContests,
   setNewCreatorFilter,
 } from '../../store/slices/contestsSlice';
 import { getDataForContest } from '../../store/slices/dataForContestSlice';

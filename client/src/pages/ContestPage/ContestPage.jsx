@@ -5,12 +5,12 @@ import isEqual from 'lodash/isEqual';
 import LightBox from 'react-image-lightbox';
 import { goToExpandedDialog } from '../../store/slices/chatSlice';
 import {
+  changeContestViewMode,
+  changeEditContest,
+  changeShowImage,
+  clearSetOfferStatusError,
   getContestById,
   setOfferStatus,
-  clearSetOfferStatusError,
-  changeEditContest,
-  changeContestViewMode,
-  changeShowImage,
 } from '../../store/slices/contestByIdSlice';
 import Header from '../../components/Header/Header';
 import ContestSideBar from '../../components/ContestSideBar/ContestSideBar';

@@ -2,8 +2,8 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {
-  updateContest,
   clearContestUpdationStore,
+  updateContest,
 } from '../../store/slices/contestUpdationSlice';
 import { changeEditContest } from '../../store/slices/contestByIdSlice';
 import ContestForm from '../ContestForm/ContestForm';

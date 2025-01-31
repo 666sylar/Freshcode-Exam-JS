@@ -6,10 +6,10 @@ import styles from './Chat.module.sass';
 import Dialog from '../../DialogComponents/Dialog/Dialog';
 import {
   changeChatShow,
-  setPreviewChatMode,
   changeShowModeCatalog,
   clearChatError,
   getPreviewChat,
+  setPreviewChatMode,
 } from '../../../../store/slices/chatSlice';
 import { chatController } from '../../../../api/ws/socketController';
 import CONSTANTS from '../../../../constants';

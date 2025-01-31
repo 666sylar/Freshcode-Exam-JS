@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import classNames from 'classnames';
 import {
   backToDialogList,
-  changeChatFavorite,
   changeChatBlock,
+  changeChatFavorite,
 } from '../../../../store/slices/chatSlice';
 import styles from './ChatHeader.module.sass';
 import CONSTANTS from '../../../../constants';

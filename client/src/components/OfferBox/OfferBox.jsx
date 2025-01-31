@@ -8,8 +8,8 @@ import { confirmAlert } from 'react-confirm-alert';
 import { goToExpandedDialog } from '../../store/slices/chatSlice';
 import {
   changeMark,
-  clearChangeMarkError,
   changeShowImage,
+  clearChangeMarkError,
 } from '../../store/slices/contestByIdSlice';
 import CONSTANTS from '../../constants';
 import styles from './OfferBox.module.sass';
