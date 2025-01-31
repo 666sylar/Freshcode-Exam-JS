@@ -11,6 +11,7 @@ WORKDIR /server
 
 COPY package*.json ./
 
+RUN apk add --no-cache python3 make g++
 RUN npm install -g nodemon
 RUN npm install -g sequelize-cli
 
