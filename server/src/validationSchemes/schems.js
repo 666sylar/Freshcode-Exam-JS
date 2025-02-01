@@ -65,7 +65,10 @@ module.exports.contestSchem = yup.object().shape({
     .required()
     .min(1),
   styleName: yup.string().min(1),
-  nameVenture: yup.string().min(1),
+  nameVenture: yup
+    .string()
+    .min(1)
+    .nullable(),
   typeOfTagline: yup.string().min(1),
   brandStyle: yup.string().min(1),
 });
