@@ -57,7 +57,7 @@ module.exports.getContestById = async (req, res, next) => {
           model: db.Offers,
           required: false,
           where:
-            req.tokenData.role === CONSTANTS.CREATOR
+            req.tokenData.role === CONSTANTS.ROLES.CREATOR
               ? { userId: req.tokenData.userId }
               : {},
           attributes: { exclude: ['userId', 'contestId'] },
