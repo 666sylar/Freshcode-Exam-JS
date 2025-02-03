@@ -1,7 +1,7 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert(
-      'Selects',
+      'selects',
       [
         {
           type: 'typeOfName',
@@ -129,6 +129,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Selects', null, {});
+    return queryInterface.bulkDelete('selects', null, {});
   },
 };

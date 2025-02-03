@@ -7,20 +7,20 @@ const {
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert(
-      'Users',
+      'users',
       [
         {
-          firstName: 'B',
-          lastName: 'B',
-          displayName: 'B',
+          first_name: 'B',
+          last_name: 'B',
+          display_name: 'B',
           password: bcrypt.hashSync('buyer00', SALT_ROUNDS),
           email: 'b@b.b',
           role: CUSTOMER,
         },
         {
-          firstName: 'C',
-          lastName: 'C',
-          displayName: 'C',
+          first_name: 'C',
+          last_name: 'C',
+          display_name: 'C',
           password: bcrypt.hashSync('creative00', SALT_ROUNDS),
           email: 'c@c.c',
           role: CREATOR,
@@ -31,6 +31,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('Users', null, {});
+    await queryInterface.bulkDelete('users', null, {});
   },
 };
