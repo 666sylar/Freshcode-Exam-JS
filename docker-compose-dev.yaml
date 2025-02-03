@@ -31,12 +31,12 @@ services:
       - /server/node_modules
 
   mongo-dev:
-    image: mongo:4.4.6-bionic
+    image: mongo:5.0.31
     ports:
       - '27017:27017'
 
   db-dev:
-    image: postgres:13.2-alpine
+    image: postgres:17.2-alpine3.21
     environment:
       - POSTGRES_PASSWORD=password
       - POSTGRES_USER=postgres

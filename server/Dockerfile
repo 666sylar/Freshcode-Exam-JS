@@ -1,4 +1,4 @@
-FROM node:16.15.1-alpine3.16
+FROM node:22.13.1-alpine3.20
 
 ARG NODE_ENV="development"
 
@@ -11,7 +11,6 @@ WORKDIR /server
 
 COPY package*.json ./
 
-RUN apk add --no-cache python3 make g++
 RUN npm install -g nodemon
 RUN npm install -g sequelize-cli
 
