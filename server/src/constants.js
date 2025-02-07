@@ -27,4 +27,6 @@ module.exports = {
   NOTIFICATION_CHANGE_OFFER_STATUS: 'changeOfferStatus',
   NEW_MESSAGE: 'newMessage',
   CHANGE_BLOCK_STATUS: 'CHANGE_BLOCK_STATUS',
+  PROD_STATIC_PATH: '/var/www/html/images/',
+  DEV_STATIC_PATH: 'public/images/',
 };
