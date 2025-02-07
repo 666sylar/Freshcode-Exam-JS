@@ -12,10 +12,17 @@ module.exports = {
         },
         {
           card_number: '4111111111111111',
-          name: 'yriy',
+          name: 'buyer',
           expiry: '09/27',
           cvc: '505',
           balance: 5000,
+        },
+        {
+          card_number: '5555555555554444',
+          name: 'creative',
+          expiry: '09/27',
+          cvc: '505',
+          balance: 0,
         },
       ],
       {}
