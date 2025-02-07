@@ -209,14 +209,14 @@ module.exports.cashout = async (req, res, next) => {
     await bankQueries.updateBankBalance(
       {
         balance: db.sequelize.literal(`CASE 
-                WHEN "cardNumber"='${req.body.number.replace(
+                WHEN "card_number"='${req.body.number.replace(
                   / /g,
                   ''
                 )}' AND "expiry"='${req.body.expiry}' AND "cvc"='${
           req.body.cvc
         }'
                     THEN "balance"+${req.body.sum}
-                WHEN "cardNumber"='${
+                WHEN "card_number"='${
                   CONSTANTS.SQUADHELP_BANK_NUMBER
                 }' AND "expiry"='${
           CONSTANTS.SQUADHELP_BANK_EXPIRY
