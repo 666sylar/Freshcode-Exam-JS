@@ -81,4 +81,5 @@ export default {
       items: ['Terms of Service', 'Privacy Policy', 'Cookie Policy'],
     },
   ],
+  REST_API_URL: `http://${serverIP}:${serverPort}/api/`,
 };
