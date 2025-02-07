@@ -28,9 +28,12 @@ const PayForm = props => {
           number: '',
           cvc: '',
           expiry: '',
+          sum: '',
         }}
         onSubmit={pay}
-        validationSchema={Schems.PaymentSchema}
+        validationSchema={
+          isPayForOrder ? Schems.PaymentSchema : Schems.CashoutSchema
+        }
       >
         {({ values }) => {
           const { name, number, expiry, cvc } = values;
