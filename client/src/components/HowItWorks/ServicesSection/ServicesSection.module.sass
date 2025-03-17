@@ -1,0 +1,123 @@
+.servicesSection
+  padding: 80px 0
+  background: linear-gradient(271.19deg, rgba(48,125,246,0.05) 0%, rgba(20,187,191,0.05) 100%), #FFFFFF
+
+.servicesContainer
+  max-width: 1200px
+  margin: 0 auto
+  padding: 0 20px
+
+.sectionHeader
+  text-align: center
+  margin-bottom: 40px
+
+  .sectionTag
+    display: inline-block
+    padding: 0.4375rem 0.9375rem
+    background: rgba(55,125,255,0.1)
+    color: #377dff
+    font-size: 0.6875rem
+    font-weight: 400
+    border-radius: 50px
+    margin-bottom: 15px
+
+  h2
+    font-size: 32px
+    font-weight: 700
+    color: #19184A
+    margin: 0
+
+  p
+    font-weight: bold
+    margin: 10px auto
+    max-width: 800px
+
+.servicesRow
+  list-style: none
+  padding: 0
+  margin: 0
+  display: flex
+  flex-direction: column
+  gap: 20px
+  align-items: stretch
+
+  @media (min-width: 992px)
+    flex-direction: row
+    flex-wrap: nowrap
+
+.serviceCard
+  background: #fff
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.04)
+  border-radius: 24px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding: 25px
+  text-align: center
+
+  @media (min-width: 992px)
+    flex: 1 1 0
+    text-align: left
+
+  h3
+    font-size: 20px
+    font-weight: 700
+    margin-bottom: 10px
+    color: #000
+
+  p
+    margin: 0 0 5rem
+    color: #828282
+
+  .cardContent
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+
+    @media (min-width: 992px)
+      align-items: flex-start
+      text-align: left
+
+.cardIcon
+  margin-bottom: 10px
+  img
+    max-width: 100%
+
+.cardAction
+  margin-top: auto
+  display: flex
+  justify-content: center
+
+  @media (min-width: 992px)
+    justify-content: flex-start
+
+.actionButton
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  padding: 13px 20px
+  font-size: 16px
+  font-weight: 700
+  border-radius: 8px
+  text-decoration: none
+  background: linear-gradient(45deg, #5a73ed 0%, #3d57d5 100%)
+  background-size: 300% 100%
+  color: #fff
+  transition: background-position 0.5s ease-in-out
+
+  &:hover
+    background-position: 100% 0
+
+  &:hover .arrowRight
+    transform: translateX(5px)
+
+.arrowRight
+  width: 35px
+  height: 25px
+  background-repeat: no-repeat
+  background-position: center center
+  flex-shrink: 0
+  background-image: url('https://www.atom.com/public/images/build_brand/icon-arrow-long-right.svg')
+  margin-left: 10px
+  transition: transform 0.3s ease
