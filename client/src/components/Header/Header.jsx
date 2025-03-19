@@ -4,13 +4,35 @@ import { Link, withRouter } from 'react-router-dom';
 import styles from './Header.module.sass';
 import CONSTANTS from '../../constants';
 import { clearUserStore, getUser } from '../../store/slices/userSlice';
+import moment from 'moment';
 
 class Header extends React.Component {
+  state = {
+    expiredCount: 0,
+  };
+
   componentDidMount () {
     if (!this.props.data) {
       this.props.getUser();
     }
+    this.calculateExpiredEvents();
+    this.interval = setInterval(() => {
+      this.calculateExpiredEvents();
+    }, 1000);
   }
+
+  componentWillUnmount () {
+    clearInterval(this.interval);
+  }
+
+  calculateExpiredEvents = () => {
+    const events = JSON.parse(localStorage.getItem('events')) || [];
+    const expiredCount = events.filter(event =>
+      moment(event.dateTime).isBefore(moment())
+    ).length;
+
+    this.setState({ expiredCount });
+  };
 
   logOut = () => {
     localStorage.clear();
@@ -57,6 +79,16 @@ class Header extends React.Component {
                   style={{ textDecoration: 'none' }}
                 >
                   <span>Messages</span>
+                </Link>
+              </li>
+              <li>
+                <Link to='/events' style={{ textDecoration: 'none' }}>
+                  <span>Events</span>
+                  {this.state.expiredCount > 0 && (
+                    <div className={styles.badge}>
+                      {this.state.expiredCount}
+                    </div>
+                  )}
                 </Link>
               </li>
               <li>
