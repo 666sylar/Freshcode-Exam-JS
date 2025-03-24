@@ -13,6 +13,7 @@ import FormTextArea from '../InputComponents/FormTextArea/FormTextArea';
 import TryAgain from '../TryAgain/TryAgain';
 import Schems from '../../utils/validators/validationSchems';
 import OptionalSelects from '../OptionalSelects/OptionalSelects';
+import DomainSelector from '../DomainSelector';
 
 const variableOptions = {
   [CONSTANTS.NAME_CONTEST]: {
@@ -137,6 +138,12 @@ class ContestForm extends React.Component {
                     warning: styles.warning,
                   }}
                 />
+              </div>
+              <div className={styles.inputContainer}>
+                <span className={styles.inputHeader}>
+                  Do you want a matching domain (.com URL) with your name?
+                </span>
+                <DomainSelector />
               </div>
               <OptionalSelects {...this.props} />
               <FieldFileInput

@@ -1,0 +1,55 @@
+.optionButton
+  position: relative
+  flex: 1
+  max-width: 200px
+  padding: 16px
+  border: 1px solid #00000014
+  border-radius: 8px
+  text-align: left
+  cursor: pointer
+
+  strong
+    display: block
+    margin-bottom: 8px
+    font-size: 16px
+    font-weight: bold
+    color: #727272
+
+  p
+    margin-bottom: 6px
+    font-size: 13px
+    color: #727272
+
+.active
+  border: 2px solid #637CF7
+
+  strong
+    color: #111
+
+  &::after
+    content: ""
+    display: block
+    background-image: url('https://www.atom.com/html/html/static_images/contests/icon-check.svg')
+    background-size: 30px auto
+    border-radius: 50%
+    width: 30px
+    height: 30px
+    position: absolute
+    top: 2px
+    right: 2px
+    z-index: 99
+
+[data-recommended='true']::before
+  content: 'Recommended'
+  background: #deeafe
+  font-size: 10px
+  font-weight: 700
+  color: #637CF7
+  display: inline-block
+  padding: 5px 8px
+  border-radius: 8px
+  position: absolute
+  top: -10px
+  left: 50%
+  transform: translateX(-50%)
+  z-index: 10
