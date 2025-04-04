@@ -312,8 +312,8 @@ module.exports.getContests = (req, res, next) => {
     include: [
       {
         model: db.Offer,
-        required: ownEntries,
-        where: ownEntries ? { userId: req.tokenData.userId } : {},
+        required: ownEntries === 'true',
+        where: ownEntries === 'true' ? { userId: req.tokenData.userId } : {},
         attributes: ['id'],
       },
     ],
