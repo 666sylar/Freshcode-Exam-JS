@@ -3,8 +3,8 @@ import { updateStoreAfterUpdateContest } from './contestByIdSlice';
 import * as restController from '../../api/rest/restController';
 import {
   decorateAsyncThunk,
-  pendingReducer,
   fulfilledReducer,
+  pendingReducer,
   rejectedReducer,
 } from '../../utils/store';
 

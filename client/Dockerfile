@@ -1,4 +1,4 @@
-FROM node:16.15.1-alpine3.16
+FROM node:22.13.1-alpine3.20
 
 ARG NODE_ENV="development"
 
@@ -10,7 +10,7 @@ COPY package*.json ./
 
 COPY . .
 
-EXPOSE 5000
+EXPOSE 5555
 
 RUN npm install
 

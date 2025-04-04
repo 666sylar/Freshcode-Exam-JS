@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Formik, Form } from 'formik';
+import { Form, Formik } from 'formik';
 import CONTANTS from '../../constants';
 import {
   addOffer,
@@ -76,11 +76,9 @@ const OfferForm = props => {
       >
         <Form className={styles.form}>
           {renderOfferInput()}
-          {valid && (
-            <button type='submit' className={styles.btnOffer}>
-              Send Offer
-            </button>
-          )}
+          <button type='submit' className={styles.btnOffer}>
+            Send Offer
+          </button>
         </Form>
       </Formik>
     </div>

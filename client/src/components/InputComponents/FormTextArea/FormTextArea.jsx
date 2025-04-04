@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Field, ErrorMessage } from 'formik';
+import { ErrorMessage, Field } from 'formik';
 
 const FormTextArea = ({ label, classes, type, ...rest }) => (
   <Field {...rest}>
